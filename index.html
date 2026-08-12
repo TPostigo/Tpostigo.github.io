@@ -5,15 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Portafolio de Tomás Postigo Tardón — Junior Data Analyst & AI Developer. Python, LLMs, RAG, Power BI, React. Madrid / Remoto.">
 <title>Tomás Postigo Tardón · Junior Data Analyst & AI Developer</title>
-
 <!-- Tipografías: Sora (display), Inter (texto), JetBrains Mono (detalles técnicos) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-
 <!-- Iconos Lucide (ligero, vía CDN) -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
 <style>
 /* ============================================================
    1. VARIABLES Y BASE
@@ -34,7 +31,6 @@
   --font-body:'Inter',sans-serif;
   --font-mono:'JetBrains Mono',monospace;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{
@@ -45,17 +41,12 @@ body{
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
-
 ::selection{background:var(--accent);color:#0c0c14}
-
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-
 /* Contenedor central */
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-
 /* Etiqueta "eyebrow" en monoespaciada, estilo prompt de terminal */
 .eyebrow{
   font-family:var(--font-mono);
@@ -66,27 +57,22 @@ a:hover{text-decoration:underline}
   margin-bottom:12px;
 }
 .eyebrow::before{content:"~$ ";color:var(--muted)}
-
 h2.section-title{
   font-family:var(--font-display);
   font-size:clamp(1.6rem,3.5vw,2.1rem);
   font-weight:700;
   margin-bottom:34px;
 }
-
 section{padding:88px 0}
 section:nth-of-type(even){background:var(--bg-alt)}
-
 /* Aparición suave al hacer scroll */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
   *{animation:none!important;transition:none!important}
 }
-
 /* ============================================================
    2. NAVEGACIÓN
    ============================================================ */
@@ -109,7 +95,6 @@ nav{
   color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s;
 }
 .nav-links a:hover{color:var(--accent);text-decoration:none}
-
 /* Menú hamburguesa en móvil */
 .nav-toggle{
   display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:6px;
@@ -126,7 +111,6 @@ nav{
   .nav-links li{border-top:1px solid var(--border)}
   .nav-links a{display:block;padding:14px 24px}
 }
-
 /* ============================================================
    3. HERO
    ============================================================ */
@@ -155,7 +139,6 @@ nav{
   margin-bottom:18px;
 }
 .hero .intro{color:var(--muted);max-width:52ch;margin-bottom:30px}
-
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -168,12 +151,10 @@ nav{
 .btn-primary:hover{box-shadow:0 6px 24px #3ddc9755}
 .btn-ghost{border:1px solid var(--border);color:var(--text)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-
 .hero-meta{display:flex;flex-wrap:wrap;gap:20px;color:var(--muted);font-size:.92rem}
 .hero-meta a,.hero-meta span{display:inline-flex;align-items:center;gap:7px;color:var(--muted)}
 .hero-meta a:hover{color:var(--accent);text-decoration:none}
 .hero-meta i{width:17px;height:17px}
-
 /* Tarjeta JSON — elemento distintivo del hero */
 .json-card{
   background:var(--card);
@@ -203,12 +184,10 @@ nav{
   vertical-align:text-bottom;animation:blink 1s step-end infinite;
 }
 @keyframes blink{50%{opacity:0}}
-
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:40px}
   .json-card{max-width:480px}
 }
-
 /* ============================================================
    4. SOBRE MÍ
    ============================================================ */
@@ -230,7 +209,6 @@ nav{
 }
 .about-facts i{width:18px;height:18px;color:var(--accent);flex-shrink:0;margin-top:3px}
 @media (max-width:820px){.about-grid{grid-template-columns:1fr}}
-
 /* ============================================================
    5. PROYECTOS
    ============================================================ */
@@ -270,7 +248,7 @@ nav{
   font-size:.9rem;font-weight:600;
 }
 .proj-link i{width:15px;height:15px}
-
+.proj-links{display:flex;flex-wrap:wrap;gap:16px}
 /* ============================================================
    6. LÍNEAS DE TIEMPO (Experiencia y Formación)
    ============================================================ */
@@ -296,7 +274,6 @@ nav{
 .tl-item ul li{padding:3px 0 3px 18px;position:relative}
 .tl-item ul li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
 .tl-item p{color:var(--muted);font-size:.94rem}
-
 /* Certificaciones (subsección de Formación, separada de los estudios) */
 .subsection-title{
   font-family:var(--font-display);
@@ -322,7 +299,6 @@ nav{
   font-family:var(--font-display);font-size:.98rem;font-weight:700;line-height:1.35;
 }
 .cert-card p{color:var(--muted);font-size:.85rem;margin-top:3px}
-
 /* ============================================================
    7. TECNOLOGÍAS
    ============================================================ */
@@ -341,7 +317,6 @@ nav{
 .tech-cat h3 i{width:17px;height:17px;color:var(--accent)}
 .tech-cat .badges .badge{background:#26263a;color:#c8c8dc}
 .tech-cat .badges .badge:hover{background:var(--accent-dim);color:var(--accent)}
-
 /* ============================================================
    8. CONTACTO Y FOOTER
    ============================================================ */
@@ -360,7 +335,6 @@ nav{
 }
 .contact-list a:hover{color:var(--accent);text-decoration:none}
 .contact-list i{width:18px;height:18px;color:var(--accent)}
-
 footer{
   border-top:1px solid var(--border);
   padding:26px 0;text-align:center;
@@ -373,7 +347,6 @@ footer{
 </style>
 </head>
 <body>
-
 <!-- ============ NAVEGACIÓN ============ -->
 <nav aria-label="Navegación principal">
   <div class="nav-inner">
@@ -392,7 +365,6 @@ footer{
     </ul>
   </div>
 </nav>
-
 <!-- ============ HERO / INICIO ============ -->
 <header class="hero" id="inicio">
   <div class="wrap hero-grid">
@@ -414,7 +386,6 @@ footer{
         <span><i data-lucide="map-pin"></i> Madrid / Remoto</span>
       </div>
     </div>
-
     <!-- Elemento distintivo: perfil como archivo JSON -->
     <div class="json-card" aria-hidden="true">
       <div class="json-bar">
@@ -425,7 +396,6 @@ footer{
     </div>
   </div>
 </header>
-
 <!-- ============ SOBRE MÍ ============ -->
 <section id="sobre-mi">
   <div class="wrap reveal">
@@ -458,14 +428,39 @@ footer{
     </div>
   </div>
 </section>
-
 <!-- ============ PROYECTOS ============ -->
 <section id="proyectos">
   <div class="wrap reveal">
     <span class="eyebrow">ls proyectos/</span>
     <h2 class="section-title">Proyectos destacados</h2>
     <div class="projects-grid">
-
+      <article class="project-card">
+        <div class="project-icon"><i data-lucide="wallet"></i></div>
+        <h3>Contador de Gastos</h3>
+        <p class="proj-sub">Aplicación full-stack de gestión de gastos personales, multi-usuario</p>
+        <ul>
+          <li>Frontend en React + TypeScript (Vercel): alta/edición/borrado de gastos, filtros, saldo en tiempo real, exportación a CSV y dashboard con gráficas interactivas (Recharts).</li>
+          <li>Backend en Python + FastAPI (Render): autenticación JWT, contraseñas cifradas con bcrypt, aislamiento de datos por usuario y validación estricta de entrada.</li>
+          <li>Análisis estadístico con pandas y predicción del gasto del mes siguiente mediante regresión lineal (numpy).</li>
+          <li>Suite de tests automáticos con pytest y despliegue continuo desde GitHub.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">React</span><span class="badge">TypeScript</span>
+          <span class="badge">Vite</span><span class="badge">Recharts</span>
+          <span class="badge">FastAPI</span><span class="badge">Python</span>
+          <span class="badge">SQLite</span><span class="badge">pandas</span>
+          <span class="badge">numpy</span><span class="badge">JWT</span>
+          <span class="badge">bcrypt</span><span class="badge">pytest</span>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://contador-gastos-web.vercel.app" target="_blank" rel="noopener">
+            <i data-lucide="external-link"></i> Demo
+          </a>
+          <a class="proj-link" href="https://contador-gastos-api.onrender.com/docs" target="_blank" rel="noopener">
+            <i data-lucide="book-open"></i> API docs
+          </a>
+        </div>
+      </article>
       <article class="project-card">
         <div class="project-icon"><i data-lucide="graduation-cap"></i></div>
         <h3>EZora</h3>
@@ -482,7 +477,6 @@ footer{
           <i data-lucide="external-link"></i> ezora-t.web.app
         </a>
       </article>
-
       <article class="project-card">
         <div class="project-icon"><i data-lucide="bot"></i></div>
         <h3>ChatBot PLN</h3>
@@ -499,7 +493,6 @@ footer{
           <i data-lucide="github"></i> Ver en GitHub
         </a>
       </article>
-
       <article class="project-card">
         <div class="project-icon"><i data-lucide="layers"></i></div>
         <h3>NebriAcademy</h3>
@@ -513,11 +506,9 @@ footer{
           <span class="badge">Clean Architecture</span><span class="badge">Agentes IA</span>
         </div>
       </article>
-
     </div>
   </div>
 </section>
-
 <!-- ============ EXPERIENCIA ============ -->
 <section id="experiencia">
   <div class="wrap reveal">
@@ -538,14 +529,12 @@ footer{
     </div>
   </div>
 </section>
-
 <!-- ============ TECNOLOGÍAS ============ -->
 <section id="tecnologias">
   <div class="wrap reveal">
     <span class="eyebrow">pip list --stack</span>
     <h2 class="section-title">Tecnologías conocidas</h2>
     <div class="tech-grid">
-
       <div class="tech-cat">
         <h3><i data-lucide="code-2"></i> Lenguajes</h3>
         <div class="badges">
@@ -553,7 +542,6 @@ footer{
           <span class="badge">Java</span><span class="badge">SQL</span><span class="badge">PHP</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="brain-circuit"></i> IA &amp; Data</h3>
         <div class="badges">
@@ -565,7 +553,6 @@ footer{
           <span class="badge">SHAP</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="database"></i> Big Data</h3>
         <div class="badges">
@@ -573,14 +560,12 @@ footer{
           <span class="badge">Pandas</span><span class="badge">Jupyter Notebook</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="bar-chart-3"></i> Visualización</h3>
         <div class="badges">
           <span class="badge">Power BI</span><span class="badge">Tableau</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="layout"></i> Frontend</h3>
         <div class="badges">
@@ -588,7 +573,6 @@ footer{
           <span class="badge">HTML5</span><span class="badge">CSS3</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="server"></i> Backend</h3>
         <div class="badges">
@@ -596,7 +580,6 @@ footer{
           <span class="badge">Flask</span><span class="badge">Spring Boot</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="hard-drive"></i> Bases de datos</h3>
         <div class="badges">
@@ -604,7 +587,6 @@ footer{
           <span class="badge">Firebase</span><span class="badge">Oracle</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="wrench"></i> Herramientas</h3>
         <div class="badges">
@@ -613,7 +595,6 @@ footer{
           <span class="badge">Excel</span><span class="badge">Antigravity IDE</span>
         </div>
       </div>
-
       <div class="tech-cat">
         <h3><i data-lucide="cloud"></i> Cloud</h3>
         <div class="badges">
@@ -621,45 +602,37 @@ footer{
           <span class="badge">Azure (AZ-900, DP-900)</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- ============ FORMACIÓN ============ -->
 <section id="formacion">
   <div class="wrap reveal">
     <span class="eyebrow">cat formacion.log</span>
     <h2 class="section-title">Formación académica</h2>
     <div class="timeline">
-
       <div class="tl-item">
         <span class="tl-date">2025 — 2026 · en curso</span>
         <h3>Ciclo de Especialización en IA y Big Data</h3>
         <p class="tl-org">Instituto Nebrija de FP · Madrid</p>
         <p>Power BI · Tableau · NLP · LLMs · RAG · Ingeniería y Análisis de Datos · Calidad de Modelos</p>
       </div>
-
       <div class="tl-item">
         <span class="tl-date">2023 — 2025</span>
         <h3>Ciclo Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
         <p class="tl-org">Instituto Nebrija de FP · Madrid</p>
         <p>Prácticas FCT en TSI · Proyecto final: EZora</p>
       </div>
-
       <div class="tl-item">
         <span class="tl-date">2021 — 2022</span>
         <h3>Año académico internacional</h3>
         <p class="tl-org">West High School · Torrance, Los Ángeles (EE. UU.)</p>
         <p>Curso completo en inmersión lingüística en inglés · Inglés B2 Cambridge</p>
       </div>
-
     </div>
-
     <!-- Certificaciones (separadas de los estudios) -->
     <h3 class="subsection-title">Certificaciones</h3>
     <div class="certs-grid">
-
       <div class="cert-card">
         <div class="project-icon"><i data-lucide="award"></i></div>
         <div>
@@ -667,7 +640,6 @@ footer{
           <p>Microsoft · finalizada</p>
         </div>
       </div>
-
       <div class="cert-card">
         <div class="project-icon"><i data-lucide="award"></i></div>
         <div>
@@ -675,7 +647,6 @@ footer{
           <p>Microsoft · finalizada</p>
         </div>
       </div>
-
       <div class="cert-card">
         <div class="project-icon"><i data-lucide="award"></i></div>
         <div>
@@ -683,11 +654,9 @@ footer{
           <p>Certiport · finalizada</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- ============ CONTACTO ============ -->
 <section id="contacto">
   <div class="wrap reveal">
@@ -710,7 +679,6 @@ footer{
     </div>
   </div>
 </section>
-
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
@@ -721,15 +689,12 @@ footer{
     </div>
   </div>
 </footer>
-
 <script>
 /* ============================================================
    JAVASCRIPT
    ============================================================ */
-
 // Renderiza los iconos de Lucide
 lucide.createIcons();
-
 // ---------- Menú móvil ----------
 function toggleMenu(btn){
   const links = document.getElementById('navLinks');
@@ -742,7 +707,6 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
     document.getElementById('navLinks').classList.remove('open');
   });
 });
-
 // ---------- Aparición suave de secciones al hacer scroll ----------
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
@@ -753,7 +717,6 @@ const observer = new IntersectionObserver(entries=>{
   });
 },{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
 // ---------- Tarjeta perfil.json con efecto de escritura ----------
 // El perfil se "escribe" línea a línea como si fuera un archivo real.
 const jsonLines = [
@@ -767,10 +730,8 @@ const jsonLines = [
   [['jp','  '],['jk','"disponible"'],['jp',': '],['js','true']],
   [['jp','}']]
 ];
-
 const jsonBody = document.getElementById('jsonBody');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 function renderLine(line){
   return line.map(([cls,txt])=>{
     const span=document.createElement('span');
@@ -779,7 +740,6 @@ function renderLine(line){
     return span;
   });
 }
-
 if(reduceMotion){
   // Sin animación: se muestra todo de golpe
   jsonLines.forEach(line=>{
@@ -792,7 +752,6 @@ if(reduceMotion){
   const cursor=document.createElement('span');
   cursor.className='cursor';
   jsonBody.appendChild(cursor);
-
   function typeStep(){
     if(li>=jsonLines.length){return}
     const line=jsonLines[li];
