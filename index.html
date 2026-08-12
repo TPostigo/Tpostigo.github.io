@@ -214,13 +214,15 @@ nav{
    ============================================================ */
 .projects-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;
+  align-items:stretch;
 }
 .project-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:var(--radius);padding:28px;
-  display:flex;flex-direction:column;gap:14px;
+  display:flex;flex-direction:column;gap:14px;height:100%;
   transition:transform .25s,border-color .25s,background .25s;
 }
+.proj-link-placeholder{visibility:hidden}
 .project-card:hover{
   transform:translateY(-6px);
   border-color:var(--accent);
@@ -344,6 +346,34 @@ footer{
 .footer-links a{color:var(--muted)}
 .footer-links a:hover{color:var(--accent);text-decoration:none}
 .footer-links i{width:17px;height:17px}
+/* ============================================================
+   9. RESPONSIVE — AJUSTES MÓVIL
+   ============================================================ */
+@media (max-width:600px){
+  body{font-size:15.5px}
+  section{padding:56px 0}
+  .wrap{padding:0 18px}
+  h2.section-title{margin-bottom:24px}
+  .hero{padding:100px 0 56px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{justify-content:center}
+  .hero-meta{flex-direction:column;gap:10px}
+  .json-card{font-size:.74rem;max-width:100%}
+  .json-body{padding:14px 16px}
+  .about-facts{padding:20px}
+  .projects-grid,.tech-grid,.certs-grid{grid-template-columns:1fr}
+  .project-card{padding:22px}
+  .proj-links{gap:12px}
+  .timeline{padding-left:26px}
+  .tl-item::before{left:-24px}
+  .contact-box{padding:28px 20px}
+  .contact-list{flex-direction:column;gap:14px;align-items:center}
+  .subsection-title{margin:40px 0 18px;font-size:1.1rem}
+}
+@media (max-width:380px){
+  .hero h1{font-size:1.9rem}
+  .btn{padding:11px 18px;font-size:.9rem}
+}
 </style>
 </head>
 <body>
@@ -437,20 +467,15 @@ footer{
       <article class="project-card">
         <div class="project-icon"><i data-lucide="wallet"></i></div>
         <h3>Contador de Gastos</h3>
-        <p class="proj-sub">Aplicación full-stack de gestión de gastos personales, multi-usuario</p>
+        <p class="proj-sub">App full-stack de gestión de gastos, multi-usuario</p>
         <ul>
-          <li>Frontend en React + TypeScript (Vercel): alta/edición/borrado de gastos, filtros, saldo en tiempo real, exportación a CSV y dashboard con gráficas interactivas (Recharts).</li>
-          <li>Backend en Python + FastAPI (Render): autenticación JWT, contraseñas cifradas con bcrypt, aislamiento de datos por usuario y validación estricta de entrada.</li>
-          <li>Análisis estadístico con pandas y predicción del gasto del mes siguiente mediante regresión lineal (numpy).</li>
-          <li>Suite de tests automáticos con pytest y despliegue continuo desde GitHub.</li>
+          <li>Frontend React + TypeScript (Vercel): gastos por categoría, saldo en tiempo real, CSV y dashboard con gráficas.</li>
+          <li>Backend FastAPI (Render): auth JWT, bcrypt, análisis con pandas y predicción de gasto con regresión lineal.</li>
         </ul>
         <div class="badges">
           <span class="badge">React</span><span class="badge">TypeScript</span>
-          <span class="badge">Vite</span><span class="badge">Recharts</span>
-          <span class="badge">FastAPI</span><span class="badge">Python</span>
-          <span class="badge">SQLite</span><span class="badge">pandas</span>
-          <span class="badge">numpy</span><span class="badge">JWT</span>
-          <span class="badge">bcrypt</span><span class="badge">pytest</span>
+          <span class="badge">FastAPI</span><span class="badge">pandas</span>
+          <span class="badge">JWT</span><span class="badge">pytest</span>
         </div>
         <div class="proj-links">
           <a class="proj-link" href="https://contador-gastos-web.vercel.app" target="_blank" rel="noopener">
@@ -466,8 +491,8 @@ footer{
         <h3>EZora</h3>
         <p class="proj-sub">Plataforma de aprendizaje de programación con tienda online · TFG</p>
         <ul>
-          <li>Full-stack: autenticación, sesiones, panel de administración de contenido y despliegue en producción.</li>
-          <li>Integración de base de datos en la nube (Firebase/Firestore) con gestión de estados en React.</li>
+          <li>Full-stack con autenticación, sesiones y panel de administración de contenido, desplegado en producción.</li>
+          <li>Base de datos en la nube (Firebase/Firestore) con gestión de estados en React.</li>
         </ul>
         <div class="badges">
           <span class="badge">React</span><span class="badge">Firebase</span>
@@ -483,7 +508,7 @@ footer{
         <p class="proj-sub">Asistente culinario con LLM y arquitectura RAG</p>
         <ul>
           <li>Procesamiento de lenguaje natural con modelos locales (Ollama) y API externa (Groq).</li>
-          <li>Implementación de RAG para respuestas contextualizadas sobre recetas.</li>
+          <li>RAG para respuestas contextualizadas sobre recetas.</li>
         </ul>
         <div class="badges">
           <span class="badge">Python</span><span class="badge">LLMs</span>
@@ -499,12 +524,13 @@ footer{
         <p class="proj-sub">Plataforma e-learning full-stack · proyecto académico grupal</p>
         <ul>
           <li>Desarrollo colaborativo con .NET 8, Blazor WebAssembly y Clean Architecture.</li>
-          <li>Uso de agentes IA en Antigravity IDE para acelerar el ciclo de desarrollo.</li>
+          <li>Agentes IA en Antigravity IDE para acelerar el ciclo de desarrollo.</li>
         </ul>
         <div class="badges">
           <span class="badge">.NET 8</span><span class="badge">Blazor WASM</span>
           <span class="badge">Clean Architecture</span><span class="badge">Agentes IA</span>
         </div>
+        <span class="proj-link proj-link-placeholder" aria-hidden="true">&nbsp;</span>
       </article>
     </div>
   </div>
