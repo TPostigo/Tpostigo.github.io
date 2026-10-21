@@ -221,32 +221,26 @@ nav{
   display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   align-items:stretch;grid-auto-flow:dense;
 }
-/* Tarjeta destacada: ocupa 2 columnas; texto a la derecha y tecnologías en una fila abajo */
+/* Tarjeta destacada: ocupa 2 columnas.
+   Cabecera (icono + título/descripción) · Frontend | Backend · nota de demo · tecnologías */
+.card-top{display:flex;align-items:center;gap:18px}
+.card-titles{display:flex;flex-direction:column;gap:14px;min-width:0}
 .card-foot{
   display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
-  gap:14px 20px;border-top:1px solid var(--border);padding-top:18px;
+  gap:14px 20px;border-top:1px solid var(--border);padding-top:18px;margin-top:auto;
 }
 .card-foot .badges{flex:1 1 auto}
+.project-card.wide ul{flex-grow:0}
 @media (min-width:641px){
-  .project-card.wide{
-    grid-column:span 2;
-    display:grid;
-    grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);
-    grid-template-rows:auto auto auto 1fr auto;
-    gap:14px 36px;
-  }
-  .project-card.wide .project-icon{grid-column:1;grid-row:1}
-  .project-card.wide h3{grid-column:1;grid-row:2}
-  .project-card.wide .proj-sub{grid-column:1;grid-row:3}
-  .project-card.wide .proj-note{grid-column:1;grid-row:4;align-self:start}
-  .project-card.wide ul{grid-column:2;grid-row:1 / span 4}
-  .project-card.wide .card-foot{grid-column:1 / -1;grid-row:5}
+  .project-card.wide{grid-column:span 2}
+  .project-card.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
 }
 @media (max-width:960px){
   .projects-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:640px){
   .projects-grid{grid-template-columns:1fr}
+  .card-top{flex-direction:column;align-items:flex-start;gap:14px}
 }
 .project-card{
   background:var(--card);border:1px solid var(--border);
@@ -521,9 +515,13 @@ footer{
         </div>
       </article>
       <article class="project-card wide">
-        <div class="project-icon"><i data-lucide="landmark"></i></div>
-        <h3>Universidad UIT</h3>
-        <p class="proj-sub">Web de una universidad ficticia con arquitectura headless: CMS en Drupal, interfaz en React</p>
+        <div class="card-top">
+          <div class="project-icon"><i data-lucide="landmark"></i></div>
+          <div class="card-titles">
+            <h3>Universidad UIT</h3>
+            <p class="proj-sub">Web de una universidad ficticia con arquitectura headless: CMS en Drupal, interfaz en React</p>
+          </div>
+        </div>
         <ul>
           <li>Frontend React + TypeScript (Vercel): titulaciones con filtro y buscador, fichas con asignaturas por curso y profesor, noticias con slider, páginas editables y formulario de contacto.</li>
           <li>Backend Drupal 11 (local): cinco tipos de contenido relacionados, JSON:API de solo lectura, Paragraphs, Webform REST con validación y límite de envíos, rol de editor con permisos mínimos y configuración exportada en Git.</li>
