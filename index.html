@@ -218,8 +218,24 @@ nav{
    5. PROYECTOS
    ============================================================ */
 .projects-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;
-  align-items:stretch;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  align-items:stretch;grid-auto-flow:dense;
+}
+/* Tarjeta destacada: ocupa 2 columnas y reparte su contenido en 2 mitades */
+.project-card.wide{
+  grid-column:span 2;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);
+  gap:14px 36px;
+}
+.card-head,.card-body{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card-head .badges{margin-top:auto}
+.project-card .card-body ul{flex-grow:0}
+@media (max-width:960px){
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .projects-grid{grid-template-columns:1fr}
+  .project-card.wide{grid-column:auto;grid-template-columns:1fr}
 }
 .project-card{
   background:var(--card);border:1px solid var(--border);
@@ -493,24 +509,28 @@ footer{
           </a>
         </div>
       </article>
-      <article class="project-card">
-        <div class="project-icon"><i data-lucide="landmark"></i></div>
-        <h3>Universidad UIT</h3>
-        <p class="proj-sub">Web de una universidad ficticia con arquitectura headless: CMS en Drupal, interfaz en React</p>
-        <ul>
-          <li>Drupal 11: contenido relacionado, JSON:API de solo lectura, Paragraphs, Webform con validación y límite de envíos, y rol de editor con permisos mínimos.</li>
-          <li>React + TypeScript (Vercel): titulaciones con filtro y buscador, profesorado, noticias y formulario de contacto.</li>
-        </ul>
-        <p class="proj-note"><strong>Demo:</strong> datos exportados de Drupal, sin servidor detrás; formulario desactivado.</p>
-        <div class="badges">
-          <span class="badge">React</span><span class="badge">TypeScript</span>
-          <span class="badge">Drupal 11</span><span class="badge">JSON:API</span>
-          <span class="badge">Paragraphs</span><span class="badge">Webform</span>
-          <span class="badge">Vite</span>
+      <article class="project-card wide">
+        <div class="card-head">
+          <div class="project-icon"><i data-lucide="landmark"></i></div>
+          <h3>Universidad UIT</h3>
+          <p class="proj-sub">Web de una universidad ficticia con arquitectura headless: CMS en Drupal, interfaz en React</p>
+          <div class="badges">
+            <span class="badge">React</span><span class="badge">TypeScript</span>
+            <span class="badge">Drupal 11</span><span class="badge">JSON:API</span>
+            <span class="badge">Paragraphs</span><span class="badge">Webform</span>
+            <span class="badge">Vite</span>
+          </div>
+          <a class="proj-link" href="https://universidad-frontend.vercel.app/" target="_blank" rel="noopener">
+            <i data-lucide="external-link"></i> Demo
+          </a>
         </div>
-        <a class="proj-link" href="https://universidad-frontend.vercel.app/" target="_blank" rel="noopener">
-          <i data-lucide="external-link"></i> Demo
-        </a>
+        <div class="card-body">
+          <ul>
+            <li>Drupal 11: contenido relacionado, JSON:API de solo lectura, Paragraphs, Webform con validación y límite de envíos, y rol de editor con permisos mínimos.</li>
+            <li>React + TypeScript (Vercel): titulaciones con filtro y buscador, profesorado, noticias y formulario de contacto.</li>
+          </ul>
+          <p class="proj-note"><strong>Demo:</strong> datos exportados de Drupal, sin servidor detrás; formulario desactivado.</p>
+        </div>
       </article>
       <article class="project-card">
         <div class="project-icon"><i data-lucide="graduation-cap"></i></div>
