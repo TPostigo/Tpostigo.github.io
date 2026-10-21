@@ -228,6 +228,8 @@ nav{
   transition:transform .25s,border-color .25s,background .25s;
 }
 .proj-link-placeholder{visibility:hidden}
+.project-card .proj-note{font-size:.85rem;color:var(--muted);border-left:2px solid var(--border);padding-left:12px}
+.project-card .proj-note strong{color:var(--text);font-weight:600}
 .project-card:hover{
   transform:translateY(-6px);
   border-color:var(--accent);
@@ -494,11 +496,12 @@ footer{
       <article class="project-card">
         <div class="project-icon"><i data-lucide="landmark"></i></div>
         <h3>Universidad UIT</h3>
-        <p class="proj-sub">Web de una universidad ficticia con arquitectura headless</p>
+        <p class="proj-sub">Web de una universidad ficticia con arquitectura headless: CMS en Drupal, interfaz en React</p>
         <ul>
-          <li>Frontend React + TypeScript (Vercel): titulaciones con filtro y buscador, fichas con asignaturas y profesores, noticias y contacto.</li>
-          <li>Backend Drupal 11: JSON:API de solo lectura, Paragraphs, Webform REST con validación y rol de editor con permisos mínimos.</li>
+          <li>Frontend React + TypeScript (Vercel): titulaciones con filtro y buscador, fichas con asignaturas por curso y profesor, noticias con slider, páginas editables y formulario de contacto.</li>
+          <li>Backend Drupal 11 (local): cinco tipos de contenido relacionados, JSON:API de solo lectura, Paragraphs, Webform REST con validación y límite de envíos, rol de editor con permisos mínimos y configuración exportada en Git.</li>
         </ul>
+        <p class="proj-note"><strong>Demo:</strong> la web publicada usa datos exportados de Drupal, sin servidor detrás, y el formulario de contacto está desactivado. El proyecto completo (Drupal + React) funciona en local.</p>
         <div class="badges">
           <span class="badge">React</span><span class="badge">TypeScript</span>
           <span class="badge">Drupal 11</span><span class="badge">JSON:API</span>
